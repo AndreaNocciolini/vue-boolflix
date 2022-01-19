@@ -36,7 +36,7 @@ export default {
   methods: {
     searchMovie(text) {
       if(text == '') {
-        console.log('Error')
+      this.movies = null
       }
       else {
       this.textSearch = text
@@ -53,7 +53,7 @@ export default {
       .then(results => {
         this.movies = results.data.results
       })
-      .catch (error => {
+      .catch ((error) => {
         console.log(error)
       })
     }

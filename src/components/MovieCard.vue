@@ -1,10 +1,10 @@
 <template>
   <div>
     <!-- <img src="" alt=""> -->
-    <h1>{{title}}</h1>
-    <h2>{{originalTitle}}</h2>
-    <h3>{{language}}</h3>
-    <h4>{{vote}}</h4>
+    <h1>Title: {{title}}</h1>
+    <h2>Original Title: {{originalTitle}}</h2>
+    <h3>Language: {{language}}</h3>
+    <h4>Likes: {{vote}}</h4>
   </div>
 </template>
 
