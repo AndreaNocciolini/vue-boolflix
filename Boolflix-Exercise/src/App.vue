@@ -1,30 +1,22 @@
 <template>
-  <div>
-    <Search 
-      @clickSearch="searchMovie($event)"
-      @enterSearch="searchMovie($event)"
-    />
-    <MovieCard 
-      v-for="(movie, index) in movies"
-      :key="index"
-      :title="movie.title"
-      :originalTitle="movie.original_title"
-      :language="movie.original_language"
-      :vote="movie.vote_count"
-    />
+  <div id="app">
+    <Header @calldoSearch="searchMovie($event)"/>
+    <Main :movies="movies" />
   </div>
 </template>
 
 <script>
-import MovieCard from './MovieCard.vue'
-import Search from './Search.vue'
+// https://api.themoviedb.org/3/search/movie?api_key=2566b1c8b5bfbbe308497b0e3d8cd55b&query=
+import Header from './components/Header.vue'
+import Main from './components/Main.vue'
 import axios from 'axios'
 
+
 export default {
-  name: 'Main',
+  name: 'App',
   components: {
-    MovieCard,
-    Search,
+    Header,
+    Main,
   },
   data(){
     return {
@@ -36,11 +28,11 @@ export default {
   methods: {
     searchMovie(text) {
       if(text == '') {
-      this.movies = null
+        this.movies = null
       }
       else {
-      this.textSearch = text
-      this.callAxios()
+        this.textSearch = text
+        this.callAxios()
       }
     },
     callAxios(){
@@ -62,6 +54,16 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss">
+@import "~bootstrap/scss/bootstrap";
+@import '~mdb-ui-kit/css/mdb.min.css';
 
+#app {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+  margin-top: 30px;
+}
 </style>

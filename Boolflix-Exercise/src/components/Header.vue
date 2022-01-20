@@ -1,7 +1,8 @@
 <template>
   <div>
       <h1>BOOLFLIX</h1>
-      <Search />
+      <Search @doSearch="$emit('calldoSearch', ($event))"
+/>
   </div>
 </template>
 
