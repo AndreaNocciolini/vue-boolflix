@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <Header @calldoSearch="searchMovie($event)"/>
-    <Main :movies="movies" />
+    <Main :movies="movies" :tvSeries="tvSeries" />
   </div>
 </template>
 
@@ -21,14 +21,17 @@ export default {
   data(){
     return {
       textSearch : '',
+      tvSeries: null,
       movies: null,
-      queryApiMovies: 'https://api.themoviedb.org/3/search/movie'
+      queryApiMovies: 'https://api.themoviedb.org/3/search/movie',
+      queryApiSeries: 'https://api.themoviedb.org/3/search/tv'
     }
   },
   methods: {
     searchMovie(text) {
       if(text == '') {
         this.movies = null
+        this.tvSeries = null
       }
       else {
         this.textSearch = text
@@ -45,6 +48,20 @@ export default {
       })
       .then(results => {
         this.movies = results.data.results
+      })
+      .catch ((error) => {
+        console.log(error)
+      }),
+      axios.get(this.queryApiSeries, {
+        params: {
+          api_key:'2566b1c8b5bfbbe308497b0e3d8cd55b',
+          language: 'en-US',
+          query: this.textSearch
+        }
+      })
+      .then(results => {
+        this.tvSeries = results.data.results
+        console.log(this.tvSeries)
       })
       .catch ((error) => {
         console.log(error)

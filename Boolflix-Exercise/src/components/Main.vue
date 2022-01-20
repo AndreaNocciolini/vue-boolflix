@@ -8,20 +8,31 @@
       :language="movie.original_language"
       :vote="movie.vote_count"
     />
+    <TvSeriesCard 
+      v-for="(tvShow, index) in tvSeries"
+      :key="index"
+      :name="tvShow.name"
+      :originalName="tvShow.original_name"
+      :language="tvShow.original_language"
+      :vote="tvShow.vote_count"
+    />
   </div>
 </template>
 
 <script>
 import MovieCard from './MovieCard.vue'
+import TvSeriesCard from './TvSeriesCard.vue'
 
 
 export default {
   name: 'Main',
   props: {
-    movies: {}
+    movies: {},
+    tvSeries: {}
   },
   components: {
     MovieCard,
+    TvSeriesCard
   },
   
 }
