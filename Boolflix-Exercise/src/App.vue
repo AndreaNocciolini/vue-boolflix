@@ -61,7 +61,6 @@ export default {
       })
       .then(results => {
         this.tvSeries = results.data.results
-        console.log(this.tvSeries)
       })
       .catch ((error) => {
         console.log(error)
