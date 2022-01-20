@@ -2,7 +2,7 @@
   <div class="col-3">
     <!-- <img src="" alt=""> -->
     <h1>Movie</h1>
-    <img :src="'https://image.tmdb.org/t/p/w342' + img" alt="">
+    <img :src="(img == null)? 'https://img.wallpapersafari.com/tablet/1536/2048/19/44/evOxST.jpg' :'https://image.tmdb.org/t/p/w300' + img" alt="">
     <h2>Title: {{title}}</h2>
     <h2>Original Title: {{originalTitle}}</h2>
     <h3>Language: <i :class="(language == 'en') ? 'flag flag-us' : 'flag flag-' + language"></i> {{language}}</h3>
@@ -23,6 +23,9 @@ export default {
 }
 </script>
 
-<style>
-
+<style lang="scss">
+  img {
+    width: 300px;
+    height: 450px;
+  }
 </style>
