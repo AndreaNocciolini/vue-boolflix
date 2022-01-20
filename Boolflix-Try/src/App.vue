@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+    <i class="fas fa-star"></i>
     <Header @doSearch="search($event)" />
     <Main :cards="cards" />
   </div>
@@ -11,6 +12,20 @@ import Header from './components/Header.vue'
 import Main from './components/Main.vue'
 import axios from 'axios'
 
+import { config } from '@fortawesome/fontawesome-svg-core'
+console.log(config.autoA11y) // true
+config.autoA11y = true
+console.log(config.autoAddCss)
+config.autoAddCss = true
+console.log(config.observeMutations)
+import {library } from '@fortawesome/fontawesome-svg-core'
+import { fas } from '@fortawesome/free-solid-svg-icons'
+import { fab } from '@fortawesome/free-brands-svg-icons'
+
+import { findIconDefinition } from '@fortawesome/fontawesome-svg-core'
+library.add(fas, fab)
+const star = findIconDefinition({ prefix: 'fas', iconName: 'star' })
+console.log(star.iconName)
 
 export default {
   name: 'App',
@@ -22,7 +37,8 @@ export default {
     return {
       queryMovies: 'https://api.themoviedb.org/3/search/movie?',
       searchText: '',
-      cards: []
+      cards: [],
+      starSupp: null
     }
   },
   created(){
