@@ -9,8 +9,8 @@
       :vote="movie.vote_count"
     />
     <TvSeriesCard 
-      v-for="(tvShow, index) in tvSeries"
-      :key="index"
+      v-for="(tvShow, indexTV) in tvSeries"
+      :key="indexTV"
       :name="tvShow.name"
       :originalName="tvShow.original_name"
       :language="tvShow.original_language"
