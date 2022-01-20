@@ -24,7 +24,7 @@ export default {
       tvSeries: null,
       movies: null,
       queryApiMovies: 'https://api.themoviedb.org/3/search/movie',
-      queryApiSeries: 'https://api.themoviedb.org/3/search/tv'
+      queryApiSeries: 'https://api.themoviedb.org/3/search/tv',
     }
   },
   methods: {

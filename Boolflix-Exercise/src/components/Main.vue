@@ -3,18 +3,20 @@
     <MovieCard 
       v-for="(movie, index) in movies"
       :key="index"
+      :img="movie.poster_path"
       :title="movie.title"
       :originalTitle="movie.original_title"
       :language="movie.original_language"
-      :vote="movie.vote_count"
+      :vote="movie.vote_average"
     />
     <TvSeriesCard 
       v-for="(tvShow, indexTV) in tvSeries"
       :key="indexTV"
+      :img="tvShow.poster_path"
       :name="tvShow.name"
       :originalName="tvShow.original_name"
       :language="tvShow.original_language"
-      :vote="tvShow.vote_count"
+      :vote="tvShow.vote_average"
     />
   </div>
 </template>
