@@ -10,8 +10,8 @@
       :vote="movie.vote_average"
     />
     <TvSeriesCard 
-      v-for="(tvShow, indexTV) in tvSeries"
-      :key="indexTV"
+      v-for="(tvShow, index) in tvSeries"
+      :key=" 'TV' + index"
       :img="tvShow.poster_path"
       :name="tvShow.name"
       :originalName="tvShow.original_name"
