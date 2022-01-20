@@ -47,6 +47,7 @@ export default {
       axios.get(this.queryApiMovies, {
         params: {
           api_key:'2566b1c8b5bfbbe308497b0e3d8cd55b',
+          language: 'en-US',
           query: this.textSearch
         }
       })
