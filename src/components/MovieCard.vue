@@ -7,7 +7,7 @@
       <div class="description-container">
         <div class="description d-flex justify-content-between align-items-center">
           <h1>Movie</h1>
-          <h2>Title: {{title}}</h2>
+          <h2>{{title}}</h2>
           <h2>Original Title: {{originalTitle}}</h2>
           <h3>Overview: <span class="overview">{{overview}}</span></h3>
           <h3>Language: <i :class="(language == 'en') ? 'flag flag-us' : 'flag flag-' + language"></i> {{language}}</h3>

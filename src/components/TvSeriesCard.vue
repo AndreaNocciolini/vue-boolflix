@@ -7,7 +7,7 @@
       <div class="description-container">
         <div class="description d-flex justify-content-between align-items-center">
           <h1>Tv Series</h1>
-          <h2>Title: {{name}}</h2>
+          <h2>T{{name}}</h2>
           <h3>Original Title: {{originalName}}</h3>
           <h3>Language: <i :class="(language == 'en') ? 'flag flag-us' : 'flag flag-' + language"></i> {{language}}</h3>
           <h3>Overview: <span class="overview">{{overview}}</span></h3>
