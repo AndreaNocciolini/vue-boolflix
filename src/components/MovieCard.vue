@@ -9,6 +9,7 @@
           <h1>Movie</h1>
           <h2>Title: {{title}}</h2>
           <h2>Original Title: {{originalTitle}}</h2>
+          <h3>Overview: <span class="overview">{{overview}}</span></h3>
           <h3>Language: <i :class="(language == 'en') ? 'flag flag-us' : 'flag flag-' + language"></i> {{language}}</h3>
           <h5>Vote: <i v-for="(star,index) in 5" :key="index" :class="(index <= voteStars(vote))? 'fas fa-star' : 'far fa-star'"></i></h5>
         </div>
@@ -27,7 +28,8 @@ export default {
     'originalTitle',
     'language',
     'vote',
-    'img'
+    'img',
+    'overview',
   ],
   methods: {
     voteStars(number) {

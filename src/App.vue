@@ -118,7 +118,9 @@ html {
     }
   }
 
-  
+  .overview {
+    font-size: small;
+  }
 
   .card-container:hover .description-container {
     display: block;

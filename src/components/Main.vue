@@ -7,6 +7,7 @@
       :title="movie.title"
       :originalTitle="movie.original_title"
       :language="movie.original_language"
+      :overview="movie.overview"
       :vote="movie.vote_average"
     />
     <TvSeriesCard 
@@ -16,6 +17,7 @@
       :name="tvShow.name"
       :originalName="tvShow.original_name"
       :language="tvShow.original_language"
+      :overview="tvShow.overview"
       :vote="tvShow.vote_average"
     />
   </main>
