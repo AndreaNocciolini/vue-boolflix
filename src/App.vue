@@ -82,4 +82,8 @@ export default {
   color: #2c3e50;
   margin-top: 30px;
 }
+
+.fas.fa-star {
+  color: #FFFF00;
+}
 </style>

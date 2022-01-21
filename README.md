@@ -1,4 +1,4 @@
-# prova
+# vue-boolflix-3
 
 ## Project setup
 ```

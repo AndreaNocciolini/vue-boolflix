@@ -6,21 +6,13 @@
     <h2>Title: {{name}}</h2>
     <h3>Original Title: {{originalName}}</h3>
     <h4>Language: <i :class="(language == 'en') ? 'flag flag-us' : 'flag flag-' + language"></i> {{language}}</h4>
-    <h5>Vote: <font-awesome-icon icon="star"></font-awesome-icon>{{voteStars(vote)}}{{vote}}</h5>
+    <h5>Vote: <i v-for="(star,index) in voteStars(vote)" :key="index" class="fas fa-star"></i></h5>
   </div>
 </template>
 
 <script>
-import { library } from '@fortawesome/fontawesome-svg-core'
-import { faStar } from '@fortawesome/free-solid-svg-icons'
-import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
-
-library.add(faStar)
 export default {
   name: 'TvSeriesCard',
-  components:{
-    FontAwesomeIcon,
-  },
   props: [
     'name',
     'originalName',
