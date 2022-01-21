@@ -6,7 +6,7 @@
     <h2>Title: {{name}}</h2>
     <h3>Original Title: {{originalName}}</h3>
     <h4>Language: <i :class="(language == 'en') ? 'flag flag-us' : 'flag flag-' + language"></i> {{language}}</h4>
-    <h5>Vote: <i v-for="(star,index) in voteStars(vote)" :key="index" class="fas fa-star"></i></h5>
+    <h5>Vote: <i v-for="(star,index) in 5" :key="index" :class="(index <= voteStars(vote))? 'fas fa-star' : 'far fa-star'"></i></h5>
   </div>
 </template>
 
