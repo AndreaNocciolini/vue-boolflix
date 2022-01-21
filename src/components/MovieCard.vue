@@ -1,12 +1,19 @@
 <template>
-  <div class="col-3">
-    <!-- <img src="" alt=""> -->
-    <h1>Movie</h1>
-    <img :src="(img == null)? 'https://img.wallpapersafari.com/tablet/1536/2048/19/44/evOxST.jpg' :'https://image.tmdb.org/t/p/w300' + img" alt="">
-    <h2>Title: {{title}}</h2>
-    <h2>Original Title: {{originalTitle}}</h2>
-    <h3>Language: <i :class="(language == 'en') ? 'flag flag-us' : 'flag flag-' + language"></i> {{language}}</h3>
-    <h5>Vote: <i v-for="(star,index) in 5" :key="index" :class="(index <= voteStars(vote))? 'fas fa-star' : 'far fa-star'"></i></h5>
+  <div class="col-3 mt-3">
+    <div class="card-container p-3 d-flex justify-content-center align-items-center">
+      <div class="img-container">
+        <img :src="(img == null)? 'https://img.wallpapersafari.com/tablet/1536/2048/19/44/evOxST.jpg' :'https://image.tmdb.org/t/p/w300' + img" alt="">
+      </div>
+      <div class="description-container">
+        <div class="description d-flex justify-content-between align-items-center">
+          <h1>Movie</h1>
+          <h2>Title: {{title}}</h2>
+          <h2>Original Title: {{originalTitle}}</h2>
+          <h3>Language: <i :class="(language == 'en') ? 'flag flag-us' : 'flag flag-' + language"></i> {{language}}</h3>
+          <h5>Vote: <i v-for="(star,index) in 5" :key="index" :class="(index <= voteStars(vote))? 'fas fa-star' : 'far fa-star'"></i></h5>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -32,10 +39,11 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 
   img {
     width: 300px;
     height: 450px;
   }
+  
 </style>

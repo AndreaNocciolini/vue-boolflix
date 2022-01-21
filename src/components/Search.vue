@@ -1,8 +1,8 @@
 <template>
   <div class="header-container">
       <div class="search-bar-container">
-          <input @keyup.enter="$emit('doSearch', inputText)" v-model="inputText" type="text" placeholder="Search..." name="search">
-          <button type="submit" @click="$emit('doSearch', inputText)">Go!</button>
+          <input class="me-3" @keyup.enter="$emit('doSearch', inputText)" v-model="inputText" type="text" placeholder="Search..." name="search">
+          <button class="btn-danger rounded-3" type="submit" @click="$emit('doSearch', inputText)"><i class="fas fa-search"></i></button>
       </div>
   </div>
 </template>
@@ -18,6 +18,8 @@ export default {
 }
 </script>
 
-<style>
-
+<style lang="scss" scoped>
+    .fas.fa-search{
+        color: white;
+    }
 </style>

@@ -1,5 +1,5 @@
 <template>
-  <main class="row">
+  <main class="row p-3">
     <MovieCard 
       v-for="(movie, index) in movies"
       :key="index"

@@ -85,7 +85,43 @@ html {
   background-color: #434343;
 }
 
+// START scss component --Card
 .fas.fa-star {
   color: #FFFF00;
 }
+
+.card-container{
+    position: relative;
+    color: white;
+    text-align: center;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		height: 100%;
+    border: 1px solid white;
+  }
+
+  .description-container {
+    display: none;
+    position: absolute;
+    background-color: grey;
+    opacity: 0.9;
+    height: 100%;
+    width: 100%;
+    cursor: pointer;
+    .description {
+      overflow: auto;
+      height: 100%;
+      padding: 0.5em;
+      opacity: 1;
+      flex-direction: column;
+    }
+  }
+
+  
+
+  .card-container:hover .description-container {
+    display: block;
+  }
+  // END scss component --Card
 </style>
