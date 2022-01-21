@@ -1,5 +1,5 @@
 <template>
-  <header>
+  <header class="d-flex justify-content-between align-items-center p-3">
       <h1>BOOLFLIX</h1>
       <Search @doSearch="$emit('calldoSearch', ($event))"
 />
@@ -17,6 +17,11 @@ export default {
 }
 </script>
 
-<style>
-
+<style lang="scss" scoped>
+  header {
+    background-color: black;
+    h1 {
+      color: red;
+    }
+  }
 </style>
