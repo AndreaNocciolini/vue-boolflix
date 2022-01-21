@@ -1,9 +1,9 @@
 <template>
-  <div>
+  <header>
       <h1>BOOLFLIX</h1>
       <Search @doSearch="$emit('calldoSearch', ($event))"
 />
-  </div>
+  </header>
 </template>
 
 <script>

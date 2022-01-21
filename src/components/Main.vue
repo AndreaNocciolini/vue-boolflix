@@ -1,5 +1,5 @@
 <template>
-  <div class="row">
+  <main class="row">
     <MovieCard 
       v-for="(movie, index) in movies"
       :key="index"
@@ -18,7 +18,7 @@
       :language="tvShow.original_language"
       :vote="tvShow.vote_average"
     />
-  </div>
+  </main>
 </template>
 
 <script>
