@@ -104,7 +104,7 @@ html {
   .description-container {
     display: none;
     position: absolute;
-    background-color: grey;
+    background-color: black;
     opacity: 0.9;
     height: 100%;
     width: 100%;
@@ -115,6 +115,9 @@ html {
       padding: 0.5em;
       opacity: 1;
       flex-direction: column;
+      .color-show-type{
+        color: red;
+      }
     }
   }
 
