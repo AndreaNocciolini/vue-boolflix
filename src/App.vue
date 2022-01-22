@@ -83,6 +83,7 @@ html {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: #434343;
+  overflow-x: hidden;
 }
 
 // START scss component --Card
