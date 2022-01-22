@@ -8,7 +8,7 @@
         <div class="description d-flex justify-content-between align-items-center">
           <h1 class="color-show-type">Movie</h1>
           <h2>{{title}}</h2>
-          <h5>Original Title: {{originalTitle}}</h5>
+          <h5 v-if="originalTitle != title">Original Title: {{originalTitle}}</h5>
           <h3>Overview: <span class="overview">{{overview}}</span></h3>
           <h3>Language: <i :class="'flag flag-' + getFlag(language)"></i> {{language}}</h3>
           <h5>Vote: <i v-for="(star,index) in 5" :key="index" :class="(index <= voteStars(vote))? 'fas fa-star' : 'far fa-star'"></i></h5>

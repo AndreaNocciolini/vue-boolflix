@@ -1,5 +1,5 @@
 <template>
-  <div class="col mt-3">
+  <div class="col-3 mt-3">
     <div class="card-container p-3 d-flex justify-content-center align-items-center">
       <div class="img-container">
         <img :src="(img == null)? 'https://img.wallpapersafari.com/tablet/1536/2048/19/44/evOxST.jpg' :'https://image.tmdb.org/t/p/w300' + img" alt="">
@@ -7,8 +7,8 @@
       <div class="description-container">
         <div class="description d-flex justify-content-between align-items-center">
           <h1 class="color-show-type">Tv Series</h1>
-          <h2>T{{name}}</h2>
-          <h5>Original Title: {{originalName}}</h5>
+          <h2>{{name}}</h2>
+          <h5 v-if="originalName != name">Original Title: {{originalName}}</h5>
           <h3>Language: <i :class="'flag flag-' + getFlag(language)"></i> {{language}}</h3>
           <h3>Overview: <span class="overview">{{overview}}</span></h3>
           <h5>Vote: <i v-for="(star,index) in 5" :key="index" :class="(index <= voteStars(vote))? 'fas fa-star' : 'far fa-star'"></i></h5>
