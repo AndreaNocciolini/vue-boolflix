@@ -106,16 +106,15 @@ html {
     display: none;
     position: absolute;
     background-color: black;
-    opacity: 0.9;
+    opacity: 0.78;
     height: 100%;
     width: 100%;
     cursor: pointer;
     .description {
-      overflow: auto;
       height: 100%;
       padding: 0.5em;
       opacity: 1;
-      flex-direction: column;
+      overflow: auto;
       .color-show-type{
         color: red;
       }

@@ -5,7 +5,7 @@
         <img :src="(img == null)? 'https://img.wallpapersafari.com/tablet/1536/2048/19/44/evOxST.jpg' :'https://image.tmdb.org/t/p/w300' + img" alt="">
       </div>
       <div class="description-container">
-        <div class="description d-flex justify-content-between align-items-center">
+        <div class="description d-flex justify-content-between align-items-center flex-column ">
           <h1 class="color-show-type">Movie</h1>
           <h2>{{title}}</h2>
           <h5 v-if="originalTitle != title">Original Title: {{originalTitle}}</h5>
